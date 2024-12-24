@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    android:exitFadeDuration="@android:integer/config_mediumAnimTime"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_window_focused="false"
+        android:drawable="@android:color/transparent" />
+    <item
+        android:state_focused="true"
+        android:state_enabled="false"
+        android:drawable="@android:drawable/input_extract_action_bg_normal_material_dark" />
+    <item
+        android:state_focused="true"
+        android:drawable="@android:drawable/input_method_fullscreen_background_holo" />
+    <item
+        android:drawable="@android:color/transparent" />
+</selector>
