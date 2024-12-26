@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/icon"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:layout_margin="8.0dip"
+        android:contentDescription="@null" />
+    <TextView
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textSize="19.0sp"
+        android:layout_gravity="center_vertical"
+        android:id="@id/title"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:paddingStart="8.0dip"
+        android:paddingEnd="8.0dip" />
+    <RadioButton
+        android:layout_gravity="center_vertical"
+        android:id="@id/radio"
+        android:focusable="false"
+        android:clickable="false"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="8.0dip" />
+</LinearLayout>
