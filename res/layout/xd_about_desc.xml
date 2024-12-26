@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/xd_about_desc_header"
+    android:background="@drawable/xd_pref_card_bot"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4.0dip"
+    android:layout_marginHorizontal="@dimen/xd_pref_card_horizontal_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="14.0sp"
+        android:layout_gravity="start"
+        android:id="@id/xd_about_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:text="@string/xd_about_desc"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        android:justificationMode="inter_word"
+        style="@style/xd_text_primary" />
+</FrameLayout>

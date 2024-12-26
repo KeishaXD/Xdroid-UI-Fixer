@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@id/content_parent"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:theme="@style/Theme.CollapsingToolbar.Settings"
+        android:id="@id/app_bar"
+        android:background="@color/xd_base_layout_header"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:outlineAmbientShadowColor="@android:color/transparent">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@id/collapsing_toolbar"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/xd_toolbar_height"
+            app:collapsedTitleTextAppearance="@style/xd_toolbar.Collapsed"
+            app:contentScrim="@android:color/transparent"
+            app:expandedTitleMarginEnd="@dimen/xd_toolbar_expanded_title_margin_end"
+            app:expandedTitleMarginStart="@dimen/xd_toolbar_expanded_title_margin_start"
+            app:expandedTitleTextAppearance="@style/xd_toolbar.Expanded"
+            app:extraMultilineHeightEnabled="true"
+            app:forceApplySystemWindowInsetTop="true"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll|snap"
+            app:maxLines="2"
+            app:scrimAnimationDuration="50"
+            app:scrimVisibleHeightTrigger="@dimen/settingslib_scrim_visible_height_trigger"
+            app:statusBarScrim="@null"
+            app:titleCollapseMode="fade"
+            app:toolbarId="@id/action_bar">
+            <Toolbar
+                android:theme="?android:actionBarTheme"
+                android:id="@id/action_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginTop="4.0dip"
+                android:transitionName="shared_element_view"
+                android:navigationIcon="@drawable/xd_back_arrow"
+                android:contentInsetStartWithNavigation="0.0dip"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25.0dip"
+            android:layout_marginStart="@dimen/xd_pref_card_horizontal_padding"
+            android:layout_marginEnd="@dimen/xd_pref_card_horizontal_padding"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="@dimen/xd_pref_card_radius"
+            app:cardElevation="0.0dip">
+            <FrameLayout
+                android:id="@id/content_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/xd_pref_card_horizontal_padding-negative"
+                android:layout_marginEnd="@dimen/xd_pref_card_horizontal_padding-negative" />
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:background="@drawable/xd_base_layout_round_mask"
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

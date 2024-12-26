@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/xd_firmware_banner_container"
+    android:layout_width="fill_parent"
+    android:layout_height="125.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@id/xd_firmware_banner_card"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginHorizontal="@dimen/xd_pref_card_horizontal_padding"
+        app:cardBackgroundColor="#00000000"
+        app:cardCornerRadius="@dimen/xd_pref_card_radius"
+        app:cardElevation="0.0dip">
+        <FrameLayout
+            android:background="@drawable/drawable_7f0803ed"
+            android:layout_width="fill_parent"
+            android:layout_height="125.0dip">
+            <ImageView
+                android:layout_width="200.0dip"
+                android:layout_height="200.0dip"
+                android:layout_marginTop="-15.0dip"
+                android:src="@drawable/xd_about_firmware_simply"
+                android:scaleType="fitStart"
+                android:tint="@color/xd_simply_mask"
+                android:layout_marginStart="-20.0dip" />
+            <TextView
+                android:textSize="60.0dip"
+                android:textColor="?android:colorAccent"
+                android:gravity="end|center"
+                android:paddingTop="15.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="xdroid  "
+                android:fontFamily="@font/font_7f090000"
+                android:letterSpacing="-0.04" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
