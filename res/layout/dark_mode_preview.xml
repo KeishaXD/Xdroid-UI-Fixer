@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dark_mode_preview"
+        android:layout_marginHorizontal="35.0dip" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextClock
+            android:textSize="40.0sp"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100.0dip"
+            android:text="1:56:44"
+            android:format12Hour="h:mm:ss"
+            android:format24Hour="kk:mm:ss" />
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_width="150.0dip"
+            android:layout_height="26.0dip"
+            android:layout_marginTop="10.0dip">
+            <ImageButton
+                android:id="@id/button_x"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_dark_switch_bg" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="?android:textColorPrimary"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch To Dark Mode" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
