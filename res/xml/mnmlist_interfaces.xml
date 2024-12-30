@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/interfaces_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <Preference
+        android:title="@string/monet_engine_title"
+        android:key="monet_engine"
+        android:summary="@string/monet_engine_summary"
+        android:fragment="com.xd.mnmlist.fragments.InterfacesMonet" />
+    <PreferenceCategory
+        android:title="@string/interfaces_statusbar_title">
+        <Preference
+            android:title="@string/clocksettings_title"
+            android:key="clock_settings"
+            android:summary="@string/clocksettings_summary"
+            android:fragment="com.xd.mnmlist.fragments.InterfacesClock" />
+        <com.xd.mnmlist.preferences.SystemSettingListPreference
+            android:entries="@array/status_bar_battery_style_entries"
+            android:title="@string/status_bar_battery_style_title"
+            android:key="status_bar_battery_style"
+            android:summary="%s"
+            android:defaultValue="0"
+            android:dialogTitle="@string/status_bar_battery_style_title"
+            android:entryValues="@array/status_bar_battery_style_values" />
+        <com.xd.mnmlist.preferences.SystemSettingListPreference
+            android:entries="@array/battery_percent_entries"
+            android:title="@string/battery_percent_title"
+            android:key="status_bar_show_battery_percent"
+            android:defaultValue="0"
+            android:dialogTitle="@string/battery_percent_title"
+            android:entryValues="@array/battery_percent_values" />
+        <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+            android:title="@string/combined_status_bar_signal_icons"
+            android:key="show_combined_status_bar_signal_icons"
+            android:summary="@string/combined_status_bar_signal_icons_summary"
+            android:defaultValue="true" />
+        <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+            android:title="@string/show_wifi_standard_icon_title"
+            android:key="show_wifi_standard_icon"
+            android:summary="@string/show_wifi_standard_icon_summary"
+            android:defaultValue="true" />
+        <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+            android:title="@string/show_fourg_icon_title"
+            android:key="show_fourg_icon"
+            android:summary="@string/show_fourg_icon_summary"
+            android:defaultValue="true" />
+        <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+            android:title="@string/data_disabled_icon_title"
+            android:key="data_disabled_icon"
+            android:summary="@string/data_disabled_icon_summary"
+            android:defaultValue="true" />
+        <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+            android:title="@string/roaming_indicator_icon_title"
+            android:key="roaming_indicator_icon"
+            android:summary="@string/roaming_indicator_icon_summary"
+            android:defaultValue="true" />
+        <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+            android:title="@string/location_privacy_indicator_title"
+            android:key="enable_location_privacy_indicator"
+            android:defaultValue="true"
+            android:summaryOn="@string/location_privacy_indicator_summary_on"
+            android:summaryOff="@string/location_privacy_indicator_summary_off" />
+        <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+            android:title="@string/mic_camera_privacy_indicator_title"
+            android:key="enable_camera_privacy_indicator"
+            android:summary="@string/mic_camera_privacy_indicator_summary"
+            android:defaultValue="true" />
+        <Preference
+            android:title="@string/statusbar_items_title"
+            android:key="systemui_tuner_statusbar"
+            android:summary="@string/statusbar_items_summary">
+            <intent
+                android:targetPackage="com.android.systemui"
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+        </Preference>
+        <com.xd.mnmlist.preferences.SystemSettingMasterSwitchPreference
+            android:title="@string/network_traffic_state_title"
+            android:key="network_traffic_state"
+            android:summary="@string/network_traffic_state_summary"
+            android:defaultValue="false"
+            android:fragment="com.xd.mnmlist.fragments.InterfacesNetworkTraffic" />
+    </PreferenceCategory>
+</PreferenceScreen>

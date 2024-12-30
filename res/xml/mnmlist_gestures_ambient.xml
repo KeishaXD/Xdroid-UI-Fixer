@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/double_tap_title"
+    android:key="double_tap"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="gesture_double_tap_screen_video"
+        app:lottie_rawRes="@raw/gesture_ambient_tap"
+        app:preview="@drawable/gesture_ambient_tap" />
+    <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+        android:title="@string/doze_double_tap_title"
+        android:key="doze_trigger_doubletap"
+        android:summary="@string/doze_double_tap_summary"
+        android:defaultValue="false" />
+</PreferenceScreen>

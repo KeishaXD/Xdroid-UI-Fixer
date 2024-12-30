@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/buttons_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.xd.mnmlist.preferences.SystemSettingListPreference
+        android:entries="@array/torch_power_button_gesture_entries"
+        android:title="@string/torch_power_button_gesture_title"
+        android:key="torch_power_button_gesture"
+        android:summary="%s"
+        android:defaultValue="0"
+        android:dialogTitle="@string/torch_power_button_gesture_title"
+        android:entryValues="@array/torch_power_button_gesture_values" />
+    <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+        android:title="@string/volume_rocker_wake_title"
+        android:key="volume_rocker_wake"
+        android:summary="@string/volume_rocker_wake_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+    <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+        android:title="@string/swap_volume_buttons_title"
+        android:key="swap_volume_buttons"
+        android:summary="@string/swap_volume_buttons_summary"
+        android:defaultValue="false" />
+</PreferenceScreen>

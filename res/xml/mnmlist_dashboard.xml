@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="mnmlist"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <Preference
+        android:key="mnmlist_header"
+        settings:layout="@layout/mnmlist_dashboard_header" />
+    <Preference
+        android:icon="@drawable/xd_about"
+        android:title="@string/xd_tap_about"
+        android:summary="@string/xd_tap_about_summary"
+        android:fragment="com.android.settings.deviceinfo.aboutxd.AboutXDFragments"
+        settings:layout="@layout/layout_7f0e02be" />
+    <Preference
+        android:title="@string/interfaces_title"
+        android:key="statusbar_category"
+        android:summary="@string/interfaces_summary"
+        android:fragment="com.xd.mnmlist.fragments.Interfaces"
+        settings:layout="@layout/xd_dashboard_pref_top" />
+    <Preference
+        android:title="@string/quicksettings_title"
+        android:key="quicksettings_category"
+        android:summary="@string/quicksettings_summary"
+        android:fragment="com.xd.mnmlist.fragments.QuickSettings"
+        settings:layout="@layout/xd_dashboard_pref_mid" />
+    <Preference
+        android:title="@string/gestures_title"
+        android:key="gestures_category"
+        android:summary="@string/gestures_summary"
+        android:fragment="com.android.settings.gestures.GestureSettings"
+        settings:layout="@layout/xd_dashboard_pref_mid" />
+    <Preference
+        android:title="@string/buttons_title"
+        android:key="buttons_category"
+        android:summary="@string/buttons_summary"
+        android:fragment="com.xd.mnmlist.fragments.Buttons"
+        settings:layout="@layout/xd_dashboard_pref_mid" />
+    <Preference
+        android:title="@string/lockscreen_title"
+        android:key="lockscreen_category"
+        android:summary="@string/lockscreen_summary"
+        android:fragment="com.xd.mnmlist.fragments.Lockscreen"
+        settings:layout="@layout/xd_dashboard_pref_mid" />
+    <Preference
+        android:title="@string/misc_title"
+        android:key="misc_category"
+        android:summary="@string/misc_summary"
+        android:fragment="com.xd.mnmlist.fragments.Misc"
+        settings:layout="@layout/xd_dashboard_pref_bot" />
+</PreferenceScreen>

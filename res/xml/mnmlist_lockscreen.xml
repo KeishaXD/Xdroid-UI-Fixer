@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/lockscreen_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+        android:title="@string/enable_fingerprint_ripple_effect_title"
+        android:key="enable_ripple_effect"
+        android:summary="@string/enable_fingerprint_ripple_effect_summary"
+        android:defaultValue="true" />
+    <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+        android:title="@string/lockscreen_battery_info_title"
+        android:key="lockscreen_battery_info"
+        android:summary="@string/lockscreen_battery_info_summary"
+        android:defaultValue="true" />
+    <PreferenceCategory
+        android:title="@string/lockscreen_media_art_category_title"
+        android:key="lockscreen_media_art_options"
+        android:order="1002">
+        <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+            android:title="@string/keygaurd_media_art_title"
+            android:key="keygaurd_media_art"
+            android:summary="@string/keygaurd_media_art_summary"
+            android:defaultValue="false" />
+        <com.xd.mnmlist.preferences.CustomSystemSeekBarPreference
+            android:max="25"
+            android:title="@string/lockscreen_media_blur_title"
+            android:key="lockscreen_media_blur"
+            android:dependency="keygaurd_media_art"
+            android:defaultValue="25"
+            android:min="0"
+            settings:allowEditText="true"
+            settings:units="dp" />
+    </PreferenceCategory>
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/qstile_requires_unlocking_title"
+        android:key="qstile_requires_unlocking"
+        android:summary="@string/qstile_requires_unlocking_summary"
+        android:defaultValue="true" />
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/disable_qs_title"
+        android:key="secure_lockscreen_qs_disabled"
+        android:summary="@string/disable_qs_summary"
+        android:defaultValue="false" />
+    <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+        android:title="@string/lockscreen_power_menu_disabled_title"
+        android:key="lockscreen_power_menu_disabled"
+        android:summary="@string/lockscreen_power_menu_disabled_summary"
+        android:defaultValue="false" />
+</PreferenceScreen>
