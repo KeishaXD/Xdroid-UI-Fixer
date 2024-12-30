@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/unlock_set_unlock_launch_picker_title"
+    android:key="security_settings_password_sub_screen"
+    settings:searchable="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        android:title="@string/lockpattern_settings_enable_visible_pattern_title"
+        android:key="visiblepattern" />
+    <SwitchPreference
+        android:title="@string/unlock_scramble_pin_layout_title"
+        android:key="lockscreen_scramble_pin_layout"
+        android:summary="@string/unlock_scramble_pin_layout_summary" />
+    <SwitchPreference
+        android:title="@string/unlock_quick_unlock_control_title"
+        android:key="lockscreen_quick_unlock_control"
+        android:summary="@string/unlock_quick_unlock_control_summary" />
+    <com.android.settings.display.TimeoutListPreference
+        android:entries="@array/lock_after_timeout_entries"
+        android:title="@string/lock_after_timeout"
+        android:key="lock_after_timeout"
+        android:summary="@string/summary_placeholder"
+        android:entryValues="@array/lock_after_timeout_values" />
+    <SwitchPreference
+        android:title="@string/lockpattern_settings_enable_power_button_instantly_locks"
+        android:key="power_button_instantly_locks" />
+</PreferenceScreen>

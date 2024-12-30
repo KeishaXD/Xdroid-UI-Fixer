@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/xd_about"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:selectable="false"
+        android:key="xd_about_header"
+        settings:layout="@layout/xd_about_header" />
+    <Preference
+        android:selectable="false"
+        android:key="xd_about_desc"
+        settings:layout="@layout/xd_about_desc" />
+    <PreferenceCategory
+        android:title="@string/xd_about_core_team_cat"
+        android:key="xd_about_core_team">
+        <Preference
+            android:icon="@drawable/xd_about_xyzuan"
+            android:title="@string/xd_about_core_xyzuan"
+            android:key="xd_about_xyzuan"
+            android:summary="@string/xd_about_core_xyzuan_role"
+            settings:layout="@layout/xd_about_core_pref">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/xyzuan" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/xd_about_friction"
+            android:title="@string/xd_about_core_friction"
+            android:key="xd_about_friction"
+            android:summary="@string/xd_about_core_friction_role"
+            settings:layout="@layout/xd_about_core_pref">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/gerobaksariroti" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/xd_about_eky"
+            android:title="@string/xd_about_core_eky"
+            android:key="xd_about_eky"
+            android:summary="@string/xd_about_core_eky_role"
+            settings:layout="@layout/xd_about_core_pref">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/hahahahahhhhh10" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/xd_about_waxaranai"
+            android:title="@string/xd_about_core_waxaranai"
+            android:key="xd_about_waxaranai"
+            android:summary="@string/xd_about_core_waxaranai_role"
+            settings:layout="@layout/xd_about_core_pref">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Waxaranai" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/xd_about_basokuahenakrasanya"
+            android:title="@string/xd_about_core_basokuahenakrasanya"
+            android:key="xd_about_basokuahenakrasanya"
+            android:summary="@string/xd_about_core_basokuahenakrasanya_role"
+            settings:layout="@layout/xd_about_core_pref">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/basokuahenakrasanya" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

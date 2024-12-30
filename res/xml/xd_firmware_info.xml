@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/xd_firmware_info"
+    settings:keywords="@string/keywords_android_version"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/xd_firmware_header"
+        android:key="xd_firmware_header"
+        settings:controller="com.xdroidui.preferences.xdSimplyController" />
+    <Preference
+        android:icon="@drawable/xd_build"
+        android:title="@string/xd_build_status"
+        android:key="xd_build_status"
+        android:summary="@string/xd_summary_placeholder"
+        settings:controller="com.xdroidui.preferences.xdBuildMaintainer"
+        settings:layout="@layout/layout_7f0e02be">
+        <intent
+            android:targetPackage="id.xyzprjkt.xd.updater"
+            android:action="android.intent.action.VIEW"
+            android:targetClass="id.xyzprjkt.xd.updater.MainActivity" />
+    </Preference>
+    <PreferenceCategory
+        android:title="@string/xd_firmware_version_cat"
+        android:key="xd_category_firmware_version">
+        <Preference
+            android:title="@string/android_plat"
+            android:key="os_firmware_version"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_top"
+            settings:searchable="false" />
+        <Preference
+            android:title="@string/aosp_revision"
+            android:key="aosp_version"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.aospVersionPreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_mid" />
+        <Preference
+            android:title="@string/xd_revision"
+            android:key="xd_version"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.xdVersionPreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_bot" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/xd_firmware_security_cat"
+        android:key="xd_category_firmware_security">
+        <Preference
+            android:title="@string/security_patch"
+            android:key="security_key"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_sin" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/xd_general_cat"
+        android:key="xd_category_general">
+        <Preference
+            android:title="@string/baseband_version"
+            android:key="base_band"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.BasebandVersionPreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_top" />
+        <Preference
+            android:title="@string/kernel_version"
+            android:key="kernel_version"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_mid" />
+        <Preference
+            android:title="@string/selinux_status"
+            android:key="selinux_status"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.SelinuxStatusPreferenceController"
+            settings:enableCopying="false"
+            settings:layout="@layout/xd_pref_card_mid" />
+        <Preference
+            android:title="@string/build_number"
+            android:key="os_build_number"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.SimpleBuildNumberPreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_bot" />
+    </PreferenceCategory>
+</PreferenceScreen>
