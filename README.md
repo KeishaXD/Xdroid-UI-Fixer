@@ -2,7 +2,7 @@ About Phone Fix for Xdroid GSI A12L is compatible with the Realme C21Y and is de
 
 
 Special thanks go to @xxdamexx and @Allivee2nd for their contributions.
-• https://t.me/xxdamexx
-• https://t.me/Allivee2nd
+https://t.me/xxdamexx
+https://t.me/Allivee2nd
 
 #xdroid #A12 #A12L #Gsi
