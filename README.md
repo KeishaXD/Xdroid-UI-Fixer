@@ -9,6 +9,12 @@
 ## Warning!!!
 This application may be detected as a virus by Google Play, but you can just ignore it because I will not steal your data.
 
+## Intended for
+- Device : Realme C21Y 
+- Xdroid Version : INA.XD.12.1.r17-331309-.REL
+- AOSP Version : android-12.1.0_r22
+- Maintainer : [@Nazim](https://github.com/naz664)
+
 ## What was fixed ?
 - [x] Device Name
 - [x] Chipset 
