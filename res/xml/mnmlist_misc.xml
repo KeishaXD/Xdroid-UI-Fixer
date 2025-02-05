@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/misc_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/global_actions_advanced_reboot_title"
+        android:key="advanced_reboot"
+        android:summary="@string/global_actions_advanced_reboot_summary"
+        android:defaultValue="true" />
+    <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+        android:title="@string/back_gesture_haptic_title"
+        android:key="back_gesture_haptic"
+        android:summary="@string/back_gesture_haptic_summary"
+        android:defaultValue="false" />
+    <Preference
+        android:title="@string/display_cutout_force_fullscreen_title"
+        android:key="display_cutout_force_fullscreen_settings"
+        android:summary="@string/display_cutout_force_fullscreen_summary"
+        android:fragment="com.xd.mnmlist.fragments.MiscForceFullscreen"
+        settings:controller="com.xd.mnmlist.fragments.MiscForceFullscreenController" />
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/ignore_window_secure_title"
+        android:key="window_ignore_secure"
+        android:summary="@string/ignore_window_secure_summary"
+        android:defaultValue="false" />
+    <com.xd.mnmlist.preferences.GlobalSettingSwitchPreference
+        android:title="@string/app_downgrade_title"
+        android:key="pm_downgrade_allowed"
+        android:summary="@string/app_downgrade_summary"
+        android:defaultValue="false" />
+    <SwitchPreference
+        android:title="@string/use_games_spoof_title"
+        android:key="use_games_spoof"
+        android:summary="@string/use_games_spoof_summary" />
+    <SwitchPreference
+        android:title="@string/use_photos_spoof_title"
+        android:key="use_photos_spoof"
+        android:summary="@string/use_photos_spoof_summary"
+        android:defaultValue="true" />
+</PreferenceScreen>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/monet_engine_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <SwitchPreference
+        android:title="@string/use_wallpaper_color_title"
+        android:key="monet_engine_use_wallpaper_color"
+        android:defaultValue="true" />
+    <com.xd.mnmlist.colorpicker.ColorPickerPreference
+        android:title="@string/monet_engine_color_override_title"
+        android:key="monet_engine_color_override"
+        android:defaultValue="0xffffff" />
+    <com.xd.mnmlist.preferences.SecureSettingSeekBarPreference
+        android:max="1000"
+        android:title="@string/monet_engine_white_luminance_user_title"
+        android:key="monet_engine_white_luminance"
+        android:defaultValue="425"
+        settings:interval="100"
+        settings:min="0" />
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/monet_engine_accurate_shades_title"
+        android:key="monet_engine_accurate_shades"
+        android:defaultValue="true" />
+    <com.xd.mnmlist.preferences.CustomSeekBarPreference
+        android:persistent="false"
+        android:max="100"
+        android:title="@string/monet_engine_chroma_factor_title"
+        android:key="monet_engine_chroma_factor"
+        android:defaultValue="100"
+        settings:interval="10"
+        settings:min="0"
+        settings:units="%" />
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/monet_engine_linear_lightness_title"
+        android:key="monet_engine_linear_lightness"
+        android:defaultValue="false" />
+</PreferenceScreen>

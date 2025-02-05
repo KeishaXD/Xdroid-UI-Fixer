@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/xd_about_phone"
+    android:key="my_device_info_pref_screen"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:selectable="false"
+        android:key="xd_aboutphone_header"
+        settings:layout="@layout/xd_about_phone_header" />
+    <PreferenceCategory
+        android:title="@string/xd_about_phone_owner_cat"
+        android:key="xd_category_owner">
+        <com.android.settings.widget.ValidatedEditTextPreference
+            android:title="@string/xd_device_owner"
+            android:key="device_name"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_top" />
+        <Preference
+            android:title="@string/emergency_info_title"
+            android:key="emergency_info"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.accounts.EmergencyInfoPreferenceController"
+            settings:layout="@layout/xd_pref_card_mid" />
+        <Preference
+            android:title="@string/my_device_info_account_preference_title"
+            android:key="branded_account"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"
+            settings:layout="@layout/xd_pref_card_bot" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/xd_about_phone_information_cat"
+        android:key="xd_category_information">
+        <Preference
+            android:title="@string/xd_firmware_info"
+            android:key="firmware_version"
+            android:summary="@string/xd_firmware_info_summary"
+            android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
+            settings:layout="@layout/xd_pref_card_top" />
+        <Preference
+            android:title="@string/xd_hardware_info"
+            android:key="device_model"
+            android:summary="@string/xd_hardware_info_summary"
+            android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
+            settings:enableCopying="true"
+            settings:keywords="@string/keywords_model_and_hardware"
+            settings:layout="@layout/xd_pref_card_bot" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/xd_about_phone_legalregulator_cat"
+        android:key="xd_category_legalregulator">
+        <Preference
+            android:title="@string/legal_information"
+            android:key="legal_container"
+            android:summary="@string/xd_legal_information_summary"
+            android:fragment="com.android.settings.LegalSettings"
+            settings:layout="@layout/xd_pref_card_sin" />
+        <Preference
+            android:title="@string/regulatory_labels"
+            android:key="regulatory_info"
+            android:summary="@string/xd_regulatory_summary"
+            settings:layout="@layout/xd_pref_card_sin">
+            <intent
+                android:action="android.settings.SHOW_REGULATORY_INFO" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/xd_about_phone_network_cat"
+        android:key="xd_category_network">
+        <Preference
+            android:title="@string/wifi_ip_address"
+            android:key="wifi_ip_address"
+            android:summary="@string/summary_placeholder"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_top" />
+        <Preference
+            android:title="@string/xd_wifi_saved"
+            android:key="saved_accesspoints_wifi_mac_address"
+            android:summary="@string/view_saved_network"
+            android:fragment="com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2"
+            settings:enableCopying="false"
+            settings:layout="@layout/xd_pref_card_mid" />
+        <Preference
+            android:title="@string/status_device_wifi_mac_address"
+            android:key="wifi_mac_address"
+            android:summary="@string/summary_placeholder"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_mid" />
+        <Preference
+            android:title="@string/status_bt_address"
+            android:key="bt_address"
+            android:summary="@string/summary_placeholder"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_bot" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/xd_general_cat"
+        android:key="xd_category_general">
+        <Preference
+            android:title="@string/status_up_time"
+            android:key="up_time"
+            android:summary="@string/summary_placeholder"
+            settings:layout="@layout/xd_pref_card_top" />
+        <Preference
+            android:title="@string/build_number"
+            android:key="build_number"
+            android:summary="@string/summary_placeholder"
+            settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"
+            settings:enableCopying="true"
+            settings:layout="@layout/xd_pref_card_bot" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/quicksettings_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/qs_show_brightness_title"
+        android:key="qs_show_brightness"
+        android:summary="@string/qs_show_brightness_summary"
+        android:defaultValue="true" />
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/qs_brightness_position_bottom_title"
+        android:key="qs_brightness_position_bottom"
+        android:summary="@string/qs_brightness_position_bottom_summary"
+        android:defaultValue="true" />
+    <com.xd.mnmlist.preferences.SecureSettingSwitchPreference
+        android:title="@string/qs_show_auto_brightness_title"
+        android:key="qs_show_auto_brightness_button"
+        android:summary="@string/qs_show_auto_brightness_summary"
+        android:defaultValue="true" />
+    <com.xd.mnmlist.preferences.SystemSettingSwitchPreference
+        android:title="@string/qs_show_battery_estimate_title"
+        android:key="qs_show_battery_estimate"
+        android:defaultValue="false"
+        android:summaryOn="@string/qs_show_battery_estimate_summary_on"
+        android:summaryOff="@string/qs_show_battery_estimate_summary_off" />
+</PreferenceScreen>

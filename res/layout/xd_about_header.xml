@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/xd_about_header"
+    android:background="@drawable/xd_pref_card_top"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="125.0dip"
+    android:layout_marginTop="4.0dip"
+    android:layout_marginBottom="2.0dip"
+    android:layout_marginHorizontal="@dimen/xd_pref_card_horizontal_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/xd_firmware_about_header_logo"
+            android:scaleType="fitStart" />
+    </RelativeLayout>
+</FrameLayout>

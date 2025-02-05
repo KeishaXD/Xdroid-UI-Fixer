@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/security_settings_face_preference_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="@string/security_settings_face_settings_use_face_category"
+        android:key="security_settings_face_unlock_category"
+        settings:controller="com.android.settings.biometrics.face.FaceUnlockCategoryPreferenceController">
+        <com.android.settingslib.RestrictedSwitchPreference
+            android:title="@string/biometric_settings_use_biometric_unlock_phone"
+            android:key="security_settings_face_keyguard"
+            settings:controller="com.android.settings.biometrics.face.FaceSettingsKeyguardPreferenceController"
+            settings:keywords="@string/keywords_face_unlock" />
+        <SwitchPreference
+            android:title="@string/biometric_settings_use_biometric_for_apps"
+            android:key="security_settings_face_app"
+            settings:controller="com.android.settings.biometrics.face.FaceSettingsAppPreferenceController"
+            settings:keywords="@string/keywords_face_unlock" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/security_settings_face_settings_preferences_category"
+        android:key="security_settings_face_manage_category">
+        <SwitchPreference
+            android:title="@string/security_settings_face_settings_require_attention"
+            android:key="security_settings_face_require_attention"
+            android:summary="@string/security_settings_face_settings_require_attention_details"
+            settings:controller="com.android.settings.biometrics.face.FaceSettingsAttentionPreferenceController"
+            settings:keywords="@string/keywords_face_unlock" />
+        <SwitchPreference
+            android:title="@string/security_settings_face_settings_require_confirmation"
+            android:key="security_settings_face_require_confirmation"
+            android:summary="@string/security_settings_face_settings_require_confirmation_details"
+            settings:controller="com.android.settings.biometrics.face.FaceSettingsConfirmPreferenceController"
+            settings:keywords="@string/keywords_face_unlock" />
+        <com.xd.mnmlist.preferences.SecureSettingListPreference
+            android:entries="@array/face_unlock_method_entries"
+            android:title="@string/face_unlock_method_title"
+            android:key="face_unlock_method"
+            android:summary="%s"
+            android:defaultValue="0"
+            android:dialogTitle="@string/face_unlock_method_title"
+            android:entryValues="@array/face_unlock_method_values"
+            settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenUnlockMethodPreferenceController"
+            settings:searchable="false" />
+        <com.android.settingslib.RestrictedSwitchPreference
+            android:title="@string/lockscreen_bypass_title"
+            android:key="security_lockscreen_bypass"
+            android:summary="@string/lockscreen_bypass_summary"
+            settings:controller="com.android.settings.biometrics.face.FaceSettingsLockscreenBypassPreferenceController"
+            settings:keywords="@string/keywords_lockscreen_bypass" />
+    </PreferenceCategory>
+    <Preference
+        android:title="@string/security_settings_face_unlock_redo_face_scan_title"
+        android:key="security_settings_face_redo_face_scan"
+        android:summary="@string/security_settings_face_unlock_redo_face_scan_summary"
+        settings:controller="com.android.settings.custom.biometrics.face.FaceSettingsRedoPreferenceController"
+        settings:keywords="@string/keywords_face_unlock" />
+    <Preference
+        android:title="@string/security_settings_face_settings_remove_face_model"
+        android:key="security_settings_face_delete_faces_container"
+        settings:keywords="@string/keywords_face_unlock" />
+    <Preference
+        android:title="@string/security_settings_face_settings_enroll"
+        android:key="security_settings_face_enroll_faces_container"
+        settings:keywords="@string/keywords_face_unlock" />
+    <com.android.settingslib.widget.FooterPreference
+        android:key="security_face_footer"
+        settings:controller="com.android.settings.biometrics.face.FaceSettingsFooterPreferenceController" />
+</PreferenceScreen>
